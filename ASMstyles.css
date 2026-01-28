@@ -1,0 +1,212 @@
+/* ================================
+   ROOT & TYPO SCALE
+================================ */
+
+html {
+  font-size: 16px;
+}
+
+:root {
+  --step--2: clamp(0.75rem, 0.7rem + 0.2vw, 0.85rem);
+  --step--1: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+  --step-0:  clamp(1rem, 0.95rem + 0.4vw, 1.125rem);
+  --step-1:  clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+  --step-2:  clamp(1.25rem, 1.1rem + 0.8vw, 1.625rem);
+  --step-3:  clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --step-4:  clamp(2rem, 1.8rem + 1.5vw, 2.5rem);
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+
+  --bg: #0f172a;
+  --surface: #121a2e;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --primary: #22d3ee;
+  --accent: #a78bfa;
+}
+
+/* ================================
+   BACKGROUND BLUR IMAGE
+================================ */
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Ảnh nền mờ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("images/background.jpg.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.45) saturate(1.25);
+  transform: scale(1.1);
+  z-index: -2;
+}
+
+/* Overlay ánh sáng */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(167,139,250,0.25), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(34,211,238,0.25), transparent 45%),
+    linear-gradient(180deg, rgba(15,23,42,0.9), rgba(2,6,23,0.95));
+  z-index: -1;
+}
+
+/* ================================
+   LAYOUT
+================================ */
+
+.container {
+  width: min(92%, 72ch);
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.65);
+  border-bottom: 1px solid #1f2937;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+}
+
+.brand {
+  font-size: var(--step-3);
+  font-weight: 800;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: var(--space-2);
+  font-size: var(--step--1);
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+/* ================================
+   HERO
+================================ */
+
+.responsive-hero {
+  margin-top: var(--space-4);
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  border-radius: 1.2rem;
+  background:
+    radial-gradient(800px circle at 10% 20%, rgba(167,139,250,0.15), transparent),
+    radial-gradient(700px circle at 90% 30%, rgba(34,211,238,0.15), transparent);
+}
+
+.hero-content {
+  text-align: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.hero-content h2 {
+  font-size: var(--step-4);
+}
+
+.hero-content p {
+  color: var(--muted);
+}
+
+/* ================================
+   COMPONENTS
+================================ */
+
+.btn {
+  display: inline-block;
+  margin-top: var(--space-2);
+  padding: 0.65em 1.2em;
+  background: var(--primary);
+  color: #04121f;
+  font-weight: 600;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(34,211,238,0.35);
+}
+
+.card {
+  margin-top: var(--space-4);
+  background: rgba(18, 26, 46, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid #1f2937;
+  border-radius: 1rem;
+  padding: 1.5em;
+}
+
+/* Typography demo */
+.highlight { color: var(--accent); }
+
+blockquote {
+  margin: var(--space-2) 0;
+  padding-left: var(--space-2);
+  border-left: 4px solid var(--accent);
+  font-style: italic;
+}
+
+/* Units grid */
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-2);
+}
+
+.unit-box {
+  background: #0b1325;
+  padding: 1em;
+  border-radius: 0.6rem;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: var(--space-4);
+  border-top: 1px solid #1f2937;
+}
+
+.site-footer .container {
+  padding: var(--space-2) 0;
+  font-size: var(--step--1);
+  color: var(--muted);
+}
+.footer-map {
+  width: 100%;
+  height: 420px;
+  margin-top: var(--space-2);
+  border-top: 1px solid #1f2937;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(10%) contrast(1.05);
+}
+

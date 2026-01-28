@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>The Forge - Giới thiệu game</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Catamaran", sans-serif;
+            background: linear-gradient(135deg, #020617, #0f172a);
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            padding: 2rem 1rem;
+            border-bottom: 1px solid #1f2937;
+            text-align: center;
+        }
+
+        header img {
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #a78bfa;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 0.5rem;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            width: min(90%, 1100px);
+            margin: 3rem auto;
+        }
+
+        /* ===== INTRO ===== */
+        .intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+
+        .intro img {
+            width: 100%;
+            border-radius: 1rem;
+            border: 1px solid #1f2937;
+        }
+
+        .intro-text {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid #1f2937;
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+
+        /* ===== VIDEO ===== */
+        .video-section {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-top: 56.25%;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid #1f2937;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* ===== CARDS ===== */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid #1f2937;
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .card h2 {
+            color: #f472b6;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #cbd5f5;
+        }
+
+        .card:hover {
+            transform: scale(1.06);
+            background: rgba(34, 211, 238, 0.12);
+            box-shadow: 0 15px 40px rgba(34, 211, 238, 0.35);
+            border-color: #22d3ee;
+        }
+
+        .card:hover h2 {
+            color: #22d3ee;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            border-top: 1px solid #1f2937;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            padding: 1.5rem;
+            color: #94a3b8;
+        }
+
+        .footer-map iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .intro {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="images/FPT.png" alt="FPT Polyschool">
+    <h1>The Forge</h1>
+    <nav>
+        <a href="#forge">Rèn vũ khí</a> –
+        <a href="#survival">Sinh tồn</a> –
+        <a href="#conquer">Chinh phục</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- GIỚI THIỆU -->
+    <section class="intro">
+        <img src="images/background.jpg" alt="The Forge Game">
+        <div class="intro-text">
+            <h2>Giới thiệu</h2>
+            <p>
+                The Forge là tựa game hành động – sinh tồn, nơi người chơi hóa thân
+                thành thợ rèn chiến binh, chiến đấu và phát triển sức mạnh thông qua
+                việc chế tạo trang bị.
+            </p>
+        </div>
+    </section>
+
+    <!-- VIDEO YOUTUBE -->
+    <section class="video-section">
+        <h2>Trailer game</h2>
+        <br>
+        <div class="video-wrapper">
+            <iframe
+                src="https://www.youtube.com/embed/J2O6QXfaj_k"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- CARD -->
+    <section class="grid-cards">
+        <div class="card" id="forge">
+            <h2>Rèn vũ khí</h2>
+            <p>Thu thập tài nguyên và chế tạo vũ khí, áo giáp.</p>
+        </div>
+
+        <div class="card" id="survival">
+            <h2>Sinh tồn</h2>
+            <p>Chiến đấu và thích nghi với môi trường khắc nghiệt.</p>
+        </div>
+
+        <div class="card" id="conquer">
+            <h2>Chinh phục</h2>
+            <p>Đối đầu boss và khẳng định bản thân.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2026 | WEB1014 | FPT PolySchool</p>
+    </div>
+
+    <div class="footer-map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.9353979324129!2d106.60557456261594!3d10.813885763048484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b953efb20ef%3A0x41ed21a46cbdc6c!2zRlBUIFBvbHlTY2hvb2wgLSBDxqEgc-G7nyBCw6xuaCBUw6Ju!5e0!3m2!1svi!2s!4v1769409043025!5m2!1svi!2s"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
+</footer>
+
+</body>
+</html>
