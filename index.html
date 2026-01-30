@@ -16,7 +16,6 @@ body{
     line-height:1.6;
 }
 
-/* HEADER */
 header{
     text-align:center;
     padding:2rem;
@@ -34,13 +33,11 @@ nav a{
 }
 nav a:hover{color:#facc15}
 
-/* MAIN */
 .container{
     width:min(90%,1100px);
     margin:3rem auto;
 }
 
-/* INTRO */
 .intro{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -62,7 +59,6 @@ nav a:hover{color:#facc15}
     border:1px solid #1f2937;
 }
 
-/* VIDEO */
 .video-section{
     text-align:center;
     margin-bottom:3rem;
@@ -84,7 +80,6 @@ nav a:hover{color:#facc15}
     border:0;
 }
 
-/* CARDS */
 .grid-cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -122,7 +117,6 @@ nav a:hover{color:#facc15}
     border-color:#22d3ee;
 }
 
-/* FOOTER */
 footer{
     border-top:1px solid #1f2937;
     margin-top:4rem;
@@ -140,7 +134,6 @@ footer{
     border:0;
 }
 
-/* RESPONSIVE */
 @media(max-width:768px){
     .intro,.grid-cards{
         grid-template-columns:1fr;
@@ -163,7 +156,6 @@ footer{
 
 <main class="container">
 
-<!-- GIỚI THIỆU -->
 <section class="intro">
 <img src="images/background.jpg" alt="The Forge Game">
 <div class="intro-text">
@@ -176,7 +168,6 @@ khắc nghiệt.
 </div>
 </section>
 
-<!-- VIDEO -->
 <section class="video-section">
 <h2>Trailer Game</h2>
 <br>
@@ -188,33 +179,32 @@ allowfullscreen>
 </div>
 </section>
 
-<!-- CARDS -->
 <section class="grid-cards">
 
-<a href="https://forge-roblox.fandom.com/wiki/The_Forge_Roblox_Wiki"
+<a href="https://forge-roblox.fandom.com/wiki/Weapons"
    target="_blank" class="card" id="forge">
 <span>⚒️</span>
 <h2>Rèn vũ khí</h2>
 <p>
-Truy cập wiki chính thức của The Forge Roblox để tìm hiểu toàn bộ nội dung game.
+Tìm hiểu hệ thống vũ khí, crafting và nâng cấp trang bị trong The Forge.
 </p>
 </a>
 
-<a href="https://forge-roblox.fandom.com/wiki/The_Forge_Roblox_Wiki"
+<a href="https://forge-roblox.fandom.com/wiki/Gameplay"
    target="_blank" class="card" id="survival">
 <span>🔥</span>
 <h2>Sinh tồn</h2>
 <p>
-Xem thông tin tổng quan, cơ chế chơi và các hệ thống trong The Forge.
+Khám phá lối chơi sinh tồn, cơ chế chiến đấu và hệ thống gameplay.
 </p>
 </a>
 
-<a href="https://forge-roblox.fandom.com/wiki/The_Forge_Roblox_Wiki"
+<a href="https://forge-roblox.fandom.com/wiki/Bosses"
    target="_blank" class="card" id="conquer">
 <span>👑</span>
 <h2>Chinh phục</h2>
 <p>
-Khám phá toàn bộ thế giới, boss và nội dung game trên wiki The Forge.
+Đối đầu các boss mạnh mẽ và chinh phục thế giới The Forge.
 </p>
 </a>
 
@@ -228,10 +218,11 @@ Khám phá toàn bộ thế giới, boss và nội dung game trên wiki The Forg
 </div>
 
 <div class="footer-map">
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.9353979324129!2d106.60557456261594!3d10.813885763048484!5e0!3m2!1svi!2s!4v1769409043025"
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.966127888972!2d106.6032147737362!3d10.813904058503981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b953efb20ef%3A0x41ed21a46cbdc6c!2zRlBUIFBvbHlTY2hvb2wgLSBDxqEgc-G7nyBCw6xuaCBUw6Ju!5e0!3m2!1sen!2s!4v1769586740682!5m2!1sen!2s"
 loading="lazy"
-allowfullscreen>
+allowfullscreen
+referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 </div>
 </footer>
