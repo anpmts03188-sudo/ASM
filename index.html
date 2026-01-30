@@ -1,244 +1,240 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>The Forge - Giới thiệu game</title>
+<meta charset="UTF-8">
+<title>The Forge - Giới thiệu game</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
 
-        body {
-            font-family: "Catamaran", sans-serif;
-            background: linear-gradient(135deg, #020617, #0f172a);
-            color: #e5e7eb;
-            line-height: 1.6;
-        }
+body{
+    font-family:Catamaran,sans-serif;
+    background:linear-gradient(135deg,#020617,#0f172a);
+    color:#e5e7eb;
+    line-height:1.6;
+}
 
-        /* ===== HEADER ===== */
-        header {
-            padding: 2rem 1rem;
-            border-bottom: 1px solid #1f2937;
-            text-align: center;
-        }
+/* HEADER */
+header{
+    text-align:center;
+    padding:2rem;
+    border-bottom:1px solid #1f2937;
+}
 
-        header img {
-            height: 50px;
-            margin-bottom: 1rem;
-        }
+header img{height:50px;margin-bottom:1rem}
+header h1{color:#a78bfa;font-size:3rem}
 
-        header h1 {
-            font-size: 3rem;
-            color: #a78bfa;
-        }
+nav a{
+    color:#94a3b8;
+    text-decoration:none;
+    margin:0 .5rem;
+    font-weight:bold;
+}
+nav a:hover{color:#facc15}
 
-        nav a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 0.5rem;
-        }
+/* MAIN */
+.container{
+    width:min(90%,1100px);
+    margin:3rem auto;
+}
 
-        nav a:hover {
-            color: #facc15;
-        }
+/* INTRO */
+.intro{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2rem;
+    margin-bottom:3rem;
+    align-items:center;
+}
 
-        /* ===== CONTAINER ===== */
-        .container {
-            width: min(90%, 1100px);
-            margin: 3rem auto;
-        }
+.intro img{
+    width:100%;
+    border-radius:1rem;
+    border:1px solid #1f2937;
+}
 
-        /* ===== INTRO ===== */
-        .intro {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            align-items: center;
-        }
+.intro-text{
+    background:rgba(15,23,42,.85);
+    padding:2rem;
+    border-radius:1rem;
+    border:1px solid #1f2937;
+}
 
-        .intro img {
-            width: 100%;
-            border-radius: 1rem;
-            border: 1px solid #1f2937;
-        }
+/* VIDEO */
+.video-section{
+    text-align:center;
+    margin-bottom:3rem;
+}
 
-        .intro-text {
-            background: rgba(15, 23, 42, 0.85);
-            border: 1px solid #1f2937;
-            border-radius: 1rem;
-            padding: 2rem;
-        }
+.video-wrapper{
+    position:relative;
+    padding-top:56.25%;
+    border-radius:1rem;
+    overflow:hidden;
+    border:1px solid #1f2937;
+}
 
-        /* ===== VIDEO ===== */
-        .video-section {
-            margin-bottom: 3rem;
-            text-align: center;
-        }
+.video-wrapper iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
 
-        .video-wrapper {
-            position: relative;
-            padding-top: 56.25%;
-            border-radius: 1rem;
-            overflow: hidden;
-            border: 1px solid #1f2937;
-        }
+/* CARDS */
+.grid-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+    margin-bottom:3rem;
+}
 
-        .video-wrapper iframe {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+.card{
+    text-decoration:none;
+    color:inherit;
+    background:linear-gradient(160deg,rgba(15,23,42,.95),rgba(2,6,23,.95));
+    padding:2.5rem;
+    border-radius:1.25rem;
+    border:1px solid #1f2937;
+    transition:.4s;
+}
 
-        /* ===== CARDS ===== */
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
+.card span{
+    font-size:2.5rem;
+    display:block;
+}
 
-        .card {
-            background: rgba(15, 23, 42, 0.85);
-            border: 1px solid #1f2937;
-            border-radius: 1rem;
-            padding: 2rem;
-            transition: all 0.3s ease;
-        }
+.card h2{
+    color:#f472b6;
+    margin:.75rem 0;
+}
 
-        .card h2 {
-            color: #f472b6;
-            margin-bottom: 0.5rem;
-        }
+.card p{
+    color:#cbd5f5;
+}
 
-        .card p {
-            color: #cbd5f5;
-        }
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 25px 60px rgba(34,211,238,.35);
+    border-color:#22d3ee;
+}
 
-        .card:hover {
-            transform: scale(1.06);
-            background: rgba(34, 211, 238, 0.12);
-            box-shadow: 0 15px 40px rgba(34, 211, 238, 0.35);
-            border-color: #22d3ee;
-        }
+/* FOOTER */
+footer{
+    border-top:1px solid #1f2937;
+    margin-top:4rem;
+    text-align:center;
+}
 
-        .card:hover h2 {
-            color: #22d3ee;
-        }
+.footer-content{
+    padding:1.5rem;
+    color:#94a3b8;
+}
 
-        /* ===== FOOTER ===== */
-        footer {
-            border-top: 1px solid #1f2937;
-            margin-top: 4rem;
-            text-align: center;
-        }
+.footer-map iframe{
+    width:100%;
+    height:300px;
+    border:0;
+}
 
-        .footer-content {
-            padding: 1.5rem;
-            color: #94a3b8;
-        }
-
-        .footer-map iframe {
-            width: 100%;
-            height: 300px;
-            border: 0;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .intro {
-                grid-template-columns: 1fr;
-            }
-
-            .grid-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+/* RESPONSIVE */
+@media(max-width:768px){
+    .intro,.grid-cards{
+        grid-template-columns:1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <img src="images/FPT.png" alt="FPT Polyschool">
-    <h1>The Forge</h1>
-    <nav>
-        <a href="#forge">Rèn vũ khí</a> –
-        <a href="#survival">Sinh tồn</a> –
-        <a href="#conquer">Chinh phục</a>
-    </nav>
+<img src="images/FPT.png" alt="FPT PolySchool">
+<h1>The Forge</h1>
+<nav>
+<a href="#forge">Rèn vũ khí</a> –
+<a href="#survival">Sinh tồn</a> –
+<a href="#conquer">Chinh phục</a>
+</nav>
 </header>
 
 <main class="container">
 
-    <!-- GIỚI THIỆU -->
-    <section class="intro">
-        <img src="images/background.jpg" alt="The Forge Game">
-        <div class="intro-text">
-            <h2>Giới thiệu</h2>
-            <p>
-                The Forge là tựa game hành động – sinh tồn, nơi người chơi hóa thân
-                thành thợ rèn chiến binh, chiến đấu và phát triển sức mạnh thông qua
-                việc chế tạo trang bị.
-            </p>
-        </div>
-    </section>
+<!-- GIỚI THIỆU -->
+<section class="intro">
+<img src="images/background.jpg" alt="The Forge Game">
+<div class="intro-text">
+<h2>Giới thiệu</h2>
+<p>
+The Forge là game hành động – sinh tồn trên Roblox, nơi người chơi trở thành
+thợ rèn chiến binh, chế tạo vũ khí, nâng cấp trang bị và đối đầu những thử thách
+khắc nghiệt.
+</p>
+</div>
+</section>
 
-    <!-- VIDEO YOUTUBE -->
-    <section class="video-section">
-        <h2>Trailer game</h2>
-        <br>
-        <div class="video-wrapper">
-            <iframe
-                src="https://www.youtube.com/embed/J2O6QXfaj_k"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>
+<!-- VIDEO -->
+<section class="video-section">
+<h2>Trailer Game</h2>
+<br>
+<div class="video-wrapper">
+<iframe 
+src="https://www.youtube.com/embed/J2O6QXfaj_k"
+allowfullscreen>
+</iframe>
+</div>
+</section>
 
-    <!-- CARD -->
-    <section class="grid-cards">
-        <div class="card" id="forge">
-            <h2>Rèn vũ khí</h2>
-            <p>Thu thập tài nguyên và chế tạo vũ khí, áo giáp.</p>
-        </div>
+<!-- CARDS -->
+<section class="grid-cards">
 
-        <div class="card" id="survival">
-            <h2>Sinh tồn</h2>
-            <p>Chiến đấu và thích nghi với môi trường khắc nghiệt.</p>
-        </div>
+<a href="https://forge-roblox.fandom.com/wiki/The_Forge_Roblox_Wiki"
+   target="_blank" class="card" id="forge">
+<span>⚒️</span>
+<h2>Rèn vũ khí</h2>
+<p>
+Truy cập wiki chính thức của The Forge Roblox để tìm hiểu toàn bộ nội dung game.
+</p>
+</a>
 
-        <div class="card" id="conquer">
-            <h2>Chinh phục</h2>
-            <p>Đối đầu boss và khẳng định bản thân.</p>
-        </div>
-    </section>
+<a href="https://forge-roblox.fandom.com/wiki/The_Forge_Roblox_Wiki"
+   target="_blank" class="card" id="survival">
+<span>🔥</span>
+<h2>Sinh tồn</h2>
+<p>
+Xem thông tin tổng quan, cơ chế chơi và các hệ thống trong The Forge.
+</p>
+</a>
+
+<a href="https://forge-roblox.fandom.com/wiki/The_Forge_Roblox_Wiki"
+   target="_blank" class="card" id="conquer">
+<span>👑</span>
+<h2>Chinh phục</h2>
+<p>
+Khám phá toàn bộ thế giới, boss và nội dung game trên wiki The Forge.
+</p>
+</a>
+
+</section>
 
 </main>
 
 <footer>
-    <div class="footer-content">
-        <p>© 2026 | WEB1014 | FPT PolySchool</p>
-    </div>
+<div class="footer-content">
+<p>© 2026 | WEB1014 | FPT PolySchool</p>
+</div>
 
-    <div class="footer-map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.9353979324129!2d106.60557456261594!3d10.813885763048484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b953efb20ef%3A0x41ed21a46cbdc6c!2zRlBUIFBvbHlTY2hvb2wgLSBDxqEgc-G7nyBCw6xuaCBUw6Ju!5e0!3m2!1svi!2s!4v1769409043025!5m2!1svi!2s"
-            loading="lazy"
-            allowfullscreen>
-        </iframe>
-    </div>
+<div class="footer-map">
+<iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.9353979324129!2d106.60557456261594!3d10.813885763048484!5e0!3m2!1svi!2s!4v1769409043025"
+loading="lazy"
+allowfullscreen>
+</iframe>
+</div>
 </footer>
 
 </body>
 </html>
-
