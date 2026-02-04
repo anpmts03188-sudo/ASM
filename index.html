@@ -9,21 +9,47 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 
+/* ================= BACKGROUND (background.jpg – SÁNG HƠN) ================= */
 body{
-    font-family:Catamaran,sans-serif;
-    background:linear-gradient(135deg,#020617,#0f172a);
+    font-family: Catamaran, sans-serif;
     color:#e5e7eb;
     line-height:1.6;
+    min-height:100vh;
+    overflow-x:hidden;
+
+    background:
+        linear-gradient(
+            rgba(2,6,23,0.55),
+            rgba(15,23,42,0.55)
+        ),
+        url("images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* tăng độ sáng & nét */
+    filter: brightness(1.1) contrast(1.05);
 }
 
+/* ================= HEADER ================= */
 header{
     text-align:center;
     padding:2rem;
     border-bottom:1px solid #1f2937;
+    background:rgba(2,6,23,.55);
 }
 
-header img{height:50px;margin-bottom:1rem}
-header h1{color:#a78bfa;font-size:3rem}
+header img{
+    height:50px;
+    margin-bottom:1rem;
+}
+
+header h1{
+    color:#a78bfa;
+    font-size:3rem;
+}
 
 nav a{
     color:#94a3b8;
@@ -31,13 +57,18 @@ nav a{
     margin:0 .5rem;
     font-weight:bold;
 }
-nav a:hover{color:#facc15}
 
+nav a:hover{
+    color:#facc15;
+}
+
+/* ================= LAYOUT ================= */
 .container{
     width:min(90%,1100px);
     margin:3rem auto;
 }
 
+/* ================= INTRO ================= */
 .intro{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -53,12 +84,13 @@ nav a:hover{color:#facc15}
 }
 
 .intro-text{
-    background:rgba(15,23,42,.85);
+    background:rgba(15,23,42,.8);
     padding:2rem;
     border-radius:1rem;
     border:1px solid #1f2937;
 }
 
+/* ================= VIDEO ================= */
 .video-section{
     text-align:center;
     margin-bottom:3rem;
@@ -80,6 +112,7 @@ nav a:hover{color:#facc15}
     border:0;
 }
 
+/* ================= GRID CARDS ================= */
 .grid-cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -88,13 +121,12 @@ nav a:hover{color:#facc15}
 }
 
 .card{
-    text-decoration:none;
-    color:inherit;
-    background:linear-gradient(160deg,rgba(15,23,42,.95),rgba(2,6,23,.95));
+    background:linear-gradient(160deg,rgba(15,23,42,.9),rgba(2,6,23,.9));
     padding:2.5rem;
     border-radius:1.25rem;
     border:1px solid #1f2937;
     transition:.4s;
+    text-decoration:none;
 }
 
 .card span{
@@ -117,10 +149,12 @@ nav a:hover{color:#facc15}
     border-color:#22d3ee;
 }
 
+/* ================= FOOTER ================= */
 footer{
     border-top:1px solid #1f2937;
     margin-top:4rem;
     text-align:center;
+    background:rgba(2,6,23,.6);
 }
 
 .footer-content{
@@ -134,9 +168,14 @@ footer{
     border:0;
 }
 
+/* ================= RESPONSIVE ================= */
 @media(max-width:768px){
     .intro,.grid-cards{
         grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:2.2rem;
     }
 }
 </style>
@@ -145,67 +184,55 @@ footer{
 <body>
 
 <header>
-<img src="images/FPT.png" alt="FPT PolySchool">
-<h1>The Forge</h1>
-<nav>
-<a href="#forge">Rèn vũ khí</a> –
-<a href="#survival">Sinh tồn</a> –
-<a href="#conquer">Chinh phục</a>
-</nav>
+    <img src="images/FPT.png" alt="FPT PolySchool">
+    <h1>The Forge</h1>
+    <nav>
+        <a href="#armor">Rèn áo giáp</a> –
+        <a href="#monsters">Quái vật & Boss</a> –
+        <a href="#ores">Quặng đá</a>
+    </nav>
 </header>
 
 <main class="container">
 
 <section class="intro">
-<img src="images/background.jpg" alt="The Forge Game">
-<div class="intro-text">
-<h2>Giới thiệu</h2>
-<p>
-The Forge là game hành động – sinh tồn trên Roblox, nơi người chơi trở thành
-thợ rèn chiến binh, chế tạo vũ khí, nâng cấp trang bị và đối đầu những thử thách
-khắc nghiệt.
-</p>
-</div>
+    <img src="images/background.jpg" alt="The Forge Game">
+    <div class="intro-text">
+        <h2>Giới thiệu</h2>
+        <p>
+            The Forge là game hành động – sinh tồn trên Roblox, nơi người chơi trở thành
+            thợ rèn chiến binh, chế tạo áo giáp, nâng cấp trang bị và đối đầu những thử thách
+            khắc nghiệt.
+        </p>
+    </div>
 </section>
 
 <section class="video-section">
-<h2>Trailer Game</h2>
-<br>
-<div class="video-wrapper">
-<iframe 
-src="https://www.youtube.com/embed/J2O6QXfaj_k"
-allowfullscreen>
-</iframe>
-</div>
+    <h2>Trailer Game</h2>
+    <br>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/J2O6QXfaj_k" allowfullscreen></iframe>
+    </div>
 </section>
 
 <section class="grid-cards">
 
-<a href="https://forge-roblox.fandom.com/wiki/Weapons"
-   target="_blank" class="card" id="forge">
-<span>⚒️</span>
-<h2>Rèn vũ khí</h2>
-<p>
-Tìm hiểu hệ thống vũ khí, crafting và nâng cấp trang bị trong The Forge.
-</p>
+<a href="armor.html" class="card" id="armor">
+    <span>🛡️</span>
+    <h2>Rèn áo giáp</h2>
+    <p>Khám phá hệ thống áo giáp, crafting và nâng cấp phòng thủ.</p>
 </a>
 
-<a href="https://forge-roblox.fandom.com/wiki/Gameplay"
-   target="_blank" class="card" id="survival">
-<span>🔥</span>
-<h2>Sinh tồn</h2>
-<p>
-Khám phá lối chơi sinh tồn, cơ chế chiến đấu và hệ thống gameplay.
-</p>
+<a href="monsters.html" class="card" id="monsters">
+    <span>👹</span>
+    <h2>Quái vật & Boss</h2>
+    <p>Đối đầu những boss nguy hiểm và chiến thuật sinh tồn.</p>
 </a>
 
-<a href="https://forge-roblox.fandom.com/wiki/Bosses"
-   target="_blank" class="card" id="conquer">
-<span>👑</span>
-<h2>Chinh phục</h2>
-<p>
-Đối đầu các boss mạnh mẽ và chinh phục thế giới The Forge.
-</p>
+<a href="quang-da.html" class="card" id="ores">
+    <span>⛏️</span>
+    <h2>Các quặng đá</h2>
+    <p>Tài nguyên hiếm dùng để chế tạo và nâng cấp trang bị.</p>
 </a>
 
 </section>
@@ -214,15 +241,14 @@ Khám phá lối chơi sinh tồn, cơ chế chiến đấu và hệ thống gam
 
 <footer>
 <div class="footer-content">
-<p>© 2026 | WEB1014 | FPT PolySchool</p>
+    <p>© 2026 | WEB1014 | FPT PolySchool</p>
 </div>
 
 <div class="footer-map">
 <iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.966127888972!2d106.6032147737362!3d10.813904058503981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b953efb20ef%3A0x41ed21a46cbdc6c!2zRlBUIFBvbHlTY2hvb2wgLSBDxqEgc-G7nyBCw6xuaCBUw6Ju!5e0!3m2!1sen!2s!4v1769586740682!5m2!1sen!2s"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.966127888972!2d106.6032147737362!3d10.813904058503981"
 loading="lazy"
-allowfullscreen
-referrerpolicy="no-referrer-when-downgrade">
+allowfullscreen>
 </iframe>
 </div>
 </footer>
