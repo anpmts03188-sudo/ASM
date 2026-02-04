@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>The Forge - Quặng & Đá</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Catamaran,sans-serif;
+    background:linear-gradient(135deg,#020617,#0f172a);
+    color:#e5e7eb;
+    line-height:1.6;
+}
+
+/* ===== NÚT TRANG CHỦ GÓC TRÁI ===== */
+.home-btn{
+    position:fixed;
+    top:1rem;
+    left:1rem;
+    z-index:2000;
+
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#22d3ee,#38bdf8);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#020617;
+    font-size:1.3rem;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.home-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 18px rgba(34,211,238,.6);
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:3.5rem 1rem 2.5rem;
+    border-bottom:1px solid #1f2937;
+}
+
+header h1{
+    font-size:3rem;
+    color:#22d3ee;
+}
+
+header p{
+    color:#94a3b8;
+    margin-top:.5rem;
+}
+
+/* CONTAINER */
+.container{
+    width:min(92%,1100px);
+    margin:3rem auto;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+}
+
+/* CARD */
+.card{
+    background:rgba(15,23,42,.9);
+    border:1px solid #1f2937;
+    border-radius:1.2rem;
+    padding:2.5rem 2rem;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s ease;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+    border-color:#22d3ee;
+}
+
+.card h3{
+    font-size:1.8rem;
+    color:#facc15;
+    margin-bottom:.8rem;
+}
+
+.card p{
+    color:#cbd5f5;
+}
+
+/* MODAL */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(2,6,23,.85);
+    backdrop-filter:blur(6px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+    z-index:1000;
+}
+
+.modal.active{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.modal-box{
+    background:linear-gradient(135deg,#020617,#0f172a);
+    border:1px solid #334155;
+    border-radius:1.5rem;
+    padding:2.5rem;
+    width:min(90%,450px);
+    animation:pop .35s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(.8);opacity:0}
+    to{transform:scale(1);opacity:1}
+}
+
+.modal-box h2{
+    color:#facc15;
+    font-size:2rem;
+}
+
+.modal-box ul{
+    margin-top:1rem;
+    padding-left:1.2rem;
+}
+
+.modal-box li{
+    color:#cbd5f5;
+    margin:.4rem 0;
+}
+
+.close-btn{
+    margin-top:2rem;
+    padding:.6rem 1.4rem;
+    background:#22d3ee;
+    border-radius:.8rem;
+    color:#020617;
+    font-weight:bold;
+    cursor:pointer;
+    display:inline-block;
+}
+
+.close-btn:hover{
+    background:#67e8f9;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:1.5rem;
+    border-top:1px solid #1f2937;
+    color:#94a3b8;
+    margin-top:3rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .grid{ grid-template-columns:1fr }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NÚT QUAY VỀ TRANG CHỦ -->
+<a href="The forge asm.html" class="home-btn" title="Trang chủ">🏠</a>
+
+<header>
+    <h1>Quặng & Đá</h1>
+    <p>Các khu đảo khai thác tài nguyên trong The Forge</p>
+</header>
+
+<main class="container">
+
+<section class="grid">
+
+    <div class="card"
+        data-title="Island 1 – Quặng cơ bản"
+        data-ores="Đá Thô, Đồng, Sắt, Than đá">
+        <h3>Island 1</h3>
+        <p>Hòn đảo khởi đầu, phù hợp cho người chơi mới.</p>
+    </div>
+
+    <div class="card"
+        data-title="Island 2 – Quặng hiếm"
+        data-ores="Bạc, Vàng, Mithril, Tinh thể mana">
+        <h3>Island 2</h3>
+        <p>Khu vực trung cấp với quặng hiếm hơn.</p>
+    </div>
+
+    <div class="card"
+        data-title="Island 3 – Quặng huyền thoại"
+        data-ores="Adamantite, Obsidian, Dragon Ore, Ether Crystal">
+        <h3>Island 3</h3>
+        <p>Đảo cuối cùng, quặng huyền thoại & boss canh giữ.</p>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 | WEB1014 | FPT PolySchool
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-box">
+        <h2 id="modalTitle"></h2>
+        <ul id="modalList"></ul>
+        <div class="close-btn" id="closeModal">Đóng</div>
+    </div>
+</div>
+
+<script>
+const cards = document.querySelectorAll('.card');
+const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('modalTitle');
+const modalList = document.getElementById('modalList');
+const closeModal = document.getElementById('closeModal');
+
+cards.forEach(card=>{
+    card.addEventListener('click',()=>{
+        modalTitle.textContent = card.dataset.title;
+        modalList.innerHTML = "";
+
+        card.dataset.ores.split(",").forEach(ore=>{
+            const li = document.createElement("li");
+            li.textContent = ore.trim();
+            modalList.appendChild(li);
+        });
+
+        modal.classList.add("active");
+    });
+});
+
+closeModal.onclick = ()=> modal.classList.remove("active");
+modal.onclick = e=>{
+    if(e.target === modal) modal.classList.remove("active");
+};
+</script>
+
+</body>
+</html>

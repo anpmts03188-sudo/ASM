@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>The Forge - Rèn áo giáp</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Catamaran,sans-serif;
+    background:radial-gradient(circle at top, #0f172a, #020617 70%);
+    color:#e5e7eb;
+    line-height:1.6;
+}
+
+/* HOME ICON */
+.home-btn{
+    position:fixed;
+    top:1.5rem;
+    left:1.5rem;
+    width:52px;
+    height:52px;
+    background:linear-gradient(135deg,#22d3ee,#38bdf8);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#020617;
+    font-size:1.6rem;
+    text-decoration:none;
+    box-shadow:0 0 25px rgba(34,211,238,.6);
+    transition:.3s ease;
+    z-index:9999;
+}
+
+.home-btn:hover{
+    transform:scale(1.15);
+    box-shadow:0 0 40px rgba(34,211,238,.9);
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:3rem 1rem 2rem;
+    border-bottom:1px solid #1f2937;
+}
+
+header h1{
+    color:#a78bfa;
+    font-size:3rem;
+}
+
+header nav{
+    margin-top:.5rem;
+}
+
+header nav a{
+    color:#94a3b8;
+    text-decoration:none;
+    font-size:.95rem;
+}
+
+header nav a:hover{
+    color:#facc15;
+}
+
+/* CONTAINER */
+.container{
+    width:min(90%,900px);
+    margin:3rem auto;
+}
+
+/* SECTION (GRID ITEM) */
+.section{
+    background:rgba(15,23,42,.9);
+    padding:2.2rem;
+    border-radius:1.3rem;
+    border:1px solid #1f2937;
+    margin-bottom:2.2rem;
+    transition:.3s ease;
+}
+
+.section:hover{
+    transform:translateY(-6px);
+    border-color:#a78bfa;
+    box-shadow:0 0 30px rgba(167,139,250,.15);
+}
+
+.section h2{
+    color:#f472b6;
+    margin-bottom:1rem;
+}
+
+.section p,
+.section li{
+    color:#cbd5f5;
+}
+
+ul{
+    padding-left:1.4rem;
+}
+
+li{
+    margin-bottom:.5rem;
+}
+
+/* BACK LINK */
+.back{
+    display:inline-block;
+    margin-top:1.5rem;
+    color:#22d3ee;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.back:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:1.5rem;
+    border-top:1px solid #1f2937;
+    color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME BUTTON -->
+<a href="The forge asm.html" class="home-btn" title="Quay về trang chủ">🏠</a>
+
+<header>
+    <h1>Rèn áo giáp</h1>
+    <nav>
+        <a href="The forge asm.html">← Quay về trang chính</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="section">
+        <h2>Giới thiệu</h2>
+        <p>
+            Rèn áo giáp là một trong những yếu tố quan trọng trong The Forge.
+            Người chơi có thể chế tạo và nâng cấp áo giáp để tăng khả năng phòng thủ
+            khi chiến đấu với quái vật và boss.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Các loại áo giáp</h2>
+        <ul>
+            <li>Áo giáp thường – dễ chế tạo, phòng thủ cơ bản</li>
+            <li>Áo giáp hiếm – yêu cầu quặng hiếm</li>
+            <li>Áo giáp huyền thoại – phòng thủ cao, hiệu ứng đặc biệt</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Nâng cấp áo giáp</h2>
+        <p>
+            Áo giáp có thể được nâng cấp bằng cách sử dụng quặng, tiền vàng
+            và các vật phẩm đặc biệt để tăng chỉ số phòng thủ.
+        </p>
+    </div>
+
+    <a class="back" href="The forge asm.html">← Quay lại trang chủ</a>
+
+</main>
+
+<footer>
+    © 2026 | WEB1014 | FPT PolySchool
+</footer>
+
+</body>
+</html>
